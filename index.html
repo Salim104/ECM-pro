@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- the main css file -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./queries.css" />
+
+    <title>ECM</title>
+  </head>
+  <body>
+    <!-- ------------------------------the Navbar section-------------------------- -->
+
+    <div class="topnav" id="myTopnav">
+      <img src="./Images/LOGO.svg" alt="" />
+
+      <div class="navbar-wrapper">
+        <div class="nav-container">
+          <a href="#mystory">My story</a>
+          <a href="#whoweare">Who we are</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <p class="drop-title">Be inspired</p>
+              <img src="./Images/Vector-nav.svg" alt="" />
+            </button>
+            <div class="dropdown-content">
+              <a href="./videos-navigations/videos.html">Watch Our Videos</a>
+              <a href="./videos-navigations/podcast.html"
+                >Listen to our podcast</a
+              >
+              <a href="./videos-navigations/article.html">Read Our article</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <p class="drop-title">Empower Others</p>
+              <img src="./Images/Vector-nav.svg" alt="" />
+            </button>
+            <div class="dropdown-content">
+              <a href="./sub-navigations/community.html"
+                >Supporting our Community</a
+              >
+              <a href="./sub-navigations/sponsorship.html"
+                >Collaboration and Sponsorship</a
+              >
+              <a href="./sub-navigations/empower.html">Become a Volunteer</a>
+            </div>
+          </div>
+          <a href="./contact.html">Contact</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+            >&#9776;</a
+          >
+        </div>
+      </div>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </div>
+
+    <!-- ------------------------------My slideshow section---------------------------- -->
+    <section class="carousel-wrapper" aria-label="Newest Photos">
+      <div class="carousel" data-carousel>
+        <button class="carousel-button prev" data-carousel-button="prev">
+          &#8656;
+        </button>
+        <button class="carousel-button next" data-carousel-button="next">
+          &#8658;
+        </button>
+        <ul data-slides>
+          <li class="slide" data-active>
+            <div class="card-slide brown">
+              <h1 class="card-title">
+                <span class="card-title-inner">My</span> story
+              </h1>
+              <p class="card-slide-disc">
+                Most of my upbringing was an intense roller coaster of emotions.
+                From drowning with thoughts of anxiety, self-doubt, and
+                consistent profound ideas of just ending it all, I often felt I
+                had sunken deep in the ocean of pain and worthlessness...
+              </p>
+            </div>
+            <div class="card-slide blue">
+              <h1 class="card-title">Who we are</h1>
+
+              <p class="card-slide-disc">
+                Every Conversation Matters (ECM) is an organisation which
+                provides the platform for people to have real, profound, and
+                stories of impact. We give individuals the power to tell their
+                own story and the chance to make their voices heard. Our main
+                goal is to Inspire and Empower individuals to Win in life by
+                owning up to their true selves
+              </p>
+              <a href=""><ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+            <img src="./Images/slide-102.svg" alt="" />
+          </li>
+          <li class="slide">
+            <div class="card-slide brown">
+              <h1 class="card-title">
+                <span class="card-title-inner">My</span> story
+              </h1>
+              <p class="card-slide-disc">
+                Most of my upbringing was an intense roller coaster of emotions.
+                From drowning with thoughts of anxiety, self-doubt, and
+                consistent profound ideas of just ending it all, I often felt I
+                had sunken deep in the ocean of pain and worthlessness...
+              </p>
+            </div>
+            <div class="card-slide blue">
+              <h1 class="card-title">Who we are</h1>
+
+              <p class="card-slide-disc">
+                Every Conversation Matters (ECM) is an organisation which
+                provides the platform for people to have real, profound, and
+                stories of impact. We give individuals the power to tell their
+                own story and the chance to make their voices heard. Our main
+                goal is to Inspire and Empower individuals to Win in life by
+                owning up to their true selves
+              </p>
+              <a href=""><ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+            <img src="./Images/full-slideshow-4.svg" alt="" />
+          </li>
+          <li class="slide">
+            <div class="card-slide brown">
+              <h1 class="card-title">
+                <span class="card-title-inner">Who</span> we are
+              </h1>
+              <p class="card-slide-disc">
+                Every Conversation Matters (ECM) is an organisation which
+                provides the platform for people to have real, profound, and
+                stories of impact. We give individuals the power to tell their
+                own story and the chance to make their voices heard. Our main
+                goal is to Inspire and Empower individuals to Win in life by
+                owning up to their true selves.
+              </p>
+            </div>
+            <div class="card-slide blue">
+              <h1 class="card-title">Be Inspired</h1>
+
+              <p class="card-slide-disc">
+                Often, it is the stories of others which inspires and empowers
+                us to discover our truest selves. Watch our latest content and
+                see how our guest share about their most intimate and life
+                changing experiences.
+              </p>
+              <a href=""><ion-icon name="arrow-forward-outline"></ion-icon></a>
+            </div>
+
+            <img src="./Images/full-slideshow-5.svg" alt="" />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- -------------------------------mobile slideshow ------------------------------------->
+    <div class="slideshow-img">
+      <h1 class="slideshow-img-title">
+        <span class="slideshow-span">Every</span><br />
+        conversation<br />
+        matters.
+      </h1>
+      <a href="#">Be inspired</a>
+    </div>
+    <!-- ------------------------------My story section---------------------------- -->
+    <section class="myStory" id="mystory">
+      <div class="myStory-wrapper">
+        <div class="myStory-row">
+          <div class="myStory-col-img"></div>
+          <div class="myStory-col">
+            <h1 class="mystory-h1">“my story”</h1>
+            <p>
+              Most of my upbringing was an intense roller coaster of emotions.
+              From drowning with thoughts of anxiety, self-doubt, and consistent
+              profound ideas of just ending it all, I often felt I had sunken
+              deep in the ocean of pain and worthlessnessm, I can still remember
+              vividly at age 14 when I had been contemplating for months to take
+              my life.
+            </p>
+          </div>
+        </div>
+        <div class="myStory-text">
+          <p>
+            I cried myself to sleep almost every-single-day, waking up the next
+            day with the most innocent gratitude that I had made it to the next
+            day, while in contrast, deep down, I knew I just wanted to end it
+            all. I had had enough, enough of crying, enough of hoping and
+            longing that my life should have turned out differently.
+          </p>
+
+          <p>
+            This constant and fervent feeling that my life was harder than that
+            of anyone else, laid so heavy on my shoulders that enjoying life was
+            almost impossible. And living in a society in which avoiding pain or
+            suffering in silence is seen as a sign of strength, sharing this
+            with anyone else was not ideal. My strongest desire was to
+            experience a community that did not only see me but heard me, a
+            community that assured me that I was not alone and that I too had a
+            story that mattered. After countless efforts of trying to explain
+            who I am or why I thought the way I did, I felt more alone and
+            eventually had to shrink my truest self to fit in in a place that
+            was never meant for me anyway.
+          </p>
+
+          <p>
+            For that reason, every conversation matters was born. I felt the
+            urge so profound to start an organisation (ECM) that allows for a
+            safe space for people to voice out, speak their thoughts openly and
+            encounter their power through their own story. Because just like
+            myself, people are longing for a community that not only sees them
+            but hears them, a community that assures them that they too are not
+            alone. And Every Conversation Matters advocates for exactly that.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="mystory-scroll">
+          <p>Scroll Up</p>
+          <img src="./Images/up.svg" alt="" />
+          <img src="./Images/scroll-up.svg" alt="" />
+          <img src="./Images/down.svg" alt="" />
+          <p>Scroll down</p>
+        </div>
+      </div>
+    </section>
+    <!-- ------------------------------whowe section---------------------------- -->
+    <section class="whowe" id="whoweare">
+      <div class="whowe-row">
+        <div class="whowe-col-text">
+          <h1 class="whowe-title">
+            Who <span class="title-span">we are</span>
+          </h1>
+          <div class="whowe-disc">
+            <p>
+              Every Conversation Matters (ECM) is an organisation which provides
+              the platform for people to have real, profound, and stories of
+              impact. We give individuals the power to tell their own story and
+              the chance to make their voices heard. Our main goal is to Inspire
+              and Empower individuals to Win in life by owning up to their true
+              selves.
+            </p>
+
+            <p>
+              Our mission is to have the conversations we engage in, and the
+              message of inspiration and empowerment shared weekly, to help
+              people navigate their way around the difficulties they are faced
+              with daily. ECM believes in the spirit of self-transformation and
+              embraces the power of individuals rising towards their true
+              purpose while being unapologetically themselves.
+            </p>
+
+            <p>
+              We advocate for a community of impact and are driven by the
+              profound transformation of individuals who meet their power and
+              use their stories to give hope to others.
+            </p>
+          </div>
+        </div>
+        <div class="whowe-col">
+          <img
+            src="./Images/Rectangle 149.svg"
+            alt="a lady looking at the sunset"
+          />
+        </div>
+      </div>
+      <div class="mystory-scroll">
+        <p>Scroll Up</p>
+        <img src="./Images/up.svg" alt="" />
+        <img src="./Images/scroll-up.svg" alt="" />
+        <img src="./Images/down.svg" alt="" />
+        <p>Scroll down</p>
+      </div>
+    </section>
+    <!-- inspired section -->
+    <section class="inspired-container">
+      <div class="inspired-section">
+        <div class="inspired-col first">
+          <img
+            class="inspire-img"
+            src="./Images/Rectangle 149 (1).svg"
+            alt="two ladies having a conversation"
+          />
+        </div>
+        <div class="inspired">
+          <div class="inspired-col last">
+            <h1 class="inspired-title">
+              <span class="be-black">Be</span> Inspired
+            </h1>
+            <p class="inspired-disc">
+              Often, it is the stories of others which inspires and empowers us
+              to discover our truest selves. Watch our latest content and see
+              how our guest share about their most intimate and life changing
+              experiences.
+            </p>
+            <div class="inspired-icons">
+              <div class="icons-col">
+                <img src="./Images/Beinspired-2.svg" alt="" />
+                <p>Watch our videos</p>
+                <a href="#">Take me there</a>
+              </div>
+              <div class="icons-col">
+                <img src="./Images/Beinspired-2.svg" alt="" />
+                <p>Listen to our podcast</p>
+                <a href="#">Take me there</a>
+              </div>
+              <div class="icons-col">
+                <img src="./Images/Beinspired-2.svg" alt="" />
+                <p>Read our latest articles</p>
+                <a href="#">Take me there</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mystory-scroll">
+        <p>Scroll Up</p>
+        <img src="./Images/up.svg" alt="" />
+        <img src="./Images/scroll-up.svg" alt="" />
+        <img src="./Images/down.svg" alt="" />
+        <p>Scroll down</p>
+      </div>
+    </section>
+    <!---------------------------------- empower section---------------------------- -->
+    <section class="empower-section">
+      <div class="empower">
+        <div class="empower-text">
+          <h1>Empower others</h1>
+          <div class="empower-para">
+            <p>
+              A good community is not only made by a group of people but few
+              individuals who decides to come together for a common good makes a
+              good community. Join us and be part of the ECM community and
+              contribute in helping people transform their lives and discover
+              their real power
+            </p>
+          </div>
+        </div>
+        <div class="empower-card">
+          <div class="upper-text">
+            <h3 style="text-align: start">How you can support Our Community</h3>
+            <p>
+              A good community is not only made by a group of people but few
+              individuals who decides to come together for a common good makes a
+              good community. Join us and be part of the ECM community and
+              contribute in helping people transform their lives and discover
+              their real power
+            </p>
+          </div>
+
+          <div class="card-continer">
+            <div class="card">
+              <img
+                src="./Images/empower-1s.svg"
+                alt="a lady presenting something with her team"
+              />
+
+              <div class="container-text">
+                <h4><b>How you can support our community</b></h4>
+                <p>
+                  Join us and be part of the ECM community and contribute in
+                  helping people transform their lives and discover their real
+                  power
+                </p>
+                <button><a href="#">Take me there</a></button>
+              </div>
+            </div>
+            <div class="card-small">
+              <div class="card-container">
+                <img
+                  src="./Images/empower-2s.svg"
+                  alt="people working together"
+                />
+              </div>
+              <div class="container-text">
+                <h4><b>For collaboration and sponsorship purposes</b></h4>
+                <button><a href="#">Take me there</a></button>
+              </div>
+            </div>
+            <div class="card-small">
+              <div class="card-container">
+                <img src="./Images/empower-3s.svg" alt="a man rising a flag" />
+              </div>
+              <div class="container-text">
+                <h4><b>For collaboration and sponsorship purposes</b></h4>
+
+                <button><a href="#">Take me there</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- the scroll icons -->
+        <div>
+          <div class="mystory-scroll">
+            <p>Scroll Up</p>
+            <img src="./Images/up.svg" alt="" />
+            <img src="./Images/scroll-up.svg" alt="" />
+            <img src="./Images/down.svg" alt="" />
+            <p>Scroll down</p>
+          </div>
+        </div>
+      </div>
+      <div class="topnav-news">
+        <div class="sub-wrapper">
+          <label class="sign-title" for="search"
+            >Sign up to our newsletter</label
+          >
+          <div class="sub-middle">
+            <input
+              type="text"
+              id="search"
+              placeholder="Enter your email address"
+            />
+            <button class="subscribe-btn">
+              <a class="subscribe-link" href="#">Subscribe</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------------------------- footer section---------------------------- -->
+    <footer class="footer">
+      <div class="row-footer">
+        <div class="col-footer">
+          <h4 class="bold">Be inspired</h4>
+          <div class="bold-white">
+            <p><a href="#">Watch Our Videos</a></p>
+            <p><a href="#">Listen to our podcast</a></p>
+            <p><a href="#">Read our articles</a></p>
+          </div>
+          <h4 class="bold">MY STORY</h4>
+          <div class="no-bold">
+            <p><a href="#">Who we are</a></p>
+            <p><a href="#">Contact Us</a></p>
+          </div>
+        </div>
+        <div class="col-footer-middle">
+          <h4 class="support-title">Support Our Community</h4>
+          <div class="support-btn">
+            <a href="#">Volunteer</a>
+            <a href="#">Collaborate</a>
+            <a href="#">Donate</a>
+          </div>
+          <img src="./Images/LOGO.svg" alt="" />
+        </div>
+        <div class="col-footer-last">
+          <h4 class="title-social">LET’S CONNECT</h4>
+          <p>everyconversationmatters.ecm@gmail.com</p>
+          <p>123456789</p>
+          <h4 class="title-social-last">Reach us on our social platforms</h4>
+          <div class="social-icons">
+            <a href="#"><img src="./Images/instagram-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/twitter-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/facebook-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/yootube-ico.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

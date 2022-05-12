@@ -1,0 +1,828 @@
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+-for measurements font-size: 62.5%;
+
+*/
+
+/* main colors */
+:root {
+  --main-Background: #e9e4de;
+  --text-Color: #414d58;
+  --button-Color: #e5bf80;
+  --footer-color: #caba9b;
+  --navigation-color: #e3b26e;
+  --white-color: #fafafa;
+}
+/* -----------defaults design------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*------------------------------------- the navbar section----------------- */
+.topnav {
+  width: 100%;
+  background-color: #414d58;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+  position: fixed;
+  z-index: 99;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.navbar-wrapper {
+  padding: 1rem;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.drop-title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+.dropbtn {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  align-items: center;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 16rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  background: rgba(48, 57, 74, 0.8);
+  border-radius: 0px 0px 24px 24px;
+}
+
+.dropbtn img {
+  width: 1rem;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 1.2rem 1.6rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(255, 255, 255);
+  color: #e5bf80;
+  border-radius: 14px;
+}
+
+/* Add black background to dropdown links on hover */
+.dropdown-content a:hover {
+  /* background-color: #ddd; */
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* my navbar responsive */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: rgb(238, 231, 231);
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* ---------------------------------------My slideshow section---------------------------------------- */
+.carousel-wrapper {
+  background: #e5e5e5;
+}
+.carousel {
+  max-width: 112rem;
+  min-height: 80rem;
+  margin-left: auto;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover;
+  object-position: center; */
+}
+
+.card-slide {
+  position: absolute;
+  width: 32%;
+  background-color: #c0b39a;
+  padding: 1.6rem;
+  border-radius: 24px 44px;
+  box-shadow: 0px 4px 50px 22px rgba(0, 0, 0, 0.08),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.25);
+}
+.brown {
+  top: 15%;
+  left: 5%;
+  width: 32%;
+}
+.slide ion-icon {
+  position: absolute;
+  top: 85%;
+  left: 84%;
+  font-size: 22px;
+  border-radius: 50%;
+  color: #fff;
+  /* cursor: pointer; */
+  background-color: #9fcff8;
+}
+.blue {
+  top: 55%;
+  left: 50%;
+  width: 39%;
+  background: linear-gradient(
+    221.94deg,
+    rgba(65, 77, 88, 0.7) 61.2%,
+    rgba(65, 77, 88, 0.7) 86.71%,
+    rgba(221, 221, 221, 0.07) 108.46%,
+    rgba(255, 255, 255, 0.49) 139.83%
+  );
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-size: 4.3rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 1.4rem;
+  margin-top: 0.2rem;
+}
+
+.card-title-inner {
+  color: #414d58;
+}
+.card-slide-disc {
+  font-size: 1.4rem;
+  color: #fff;
+}
+.card-title-link {
+  font-size: 1.2rem;
+
+  text-decoration: none;
+}
+
+/* .card-title {
+  position: absolute;
+  top: 50%;
+} */
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  padding: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+/* --------------------------mobile slide-------------------------------------------- */
+.slideshow-img {
+  display: none;
+}
+
+/* ----------------------------------My story section------------------------------------- */
+
+.myStory {
+  background-color: var(--main-Background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.myStory-wrapper {
+  max-width: 130rem;
+  border: 3px solid rgba(0, 0, 0, 0.27);
+  margin: 5rem;
+  padding: 5rem;
+}
+
+.myStory-col img {
+  width: 100%;
+  height: auto;
+  /* object-fit: scale-down; */
+}
+
+.myStory-col-img {
+  background-image: url("./Images/mystory.png");
+  background-position: center;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.mystory-h1 {
+  font-weight: 900;
+  font-size: 6.4rem;
+  color: #deb173;
+  margin: 2.6rem 0;
+}
+
+.myStory-col p {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+
+.myStory-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.myStory-row:first-child {
+  display: grid;
+  align-items: center;
+}
+
+.myStory-col {
+  padding: 2rem;
+}
+.myStory-text {
+  margin: 2rem;
+}
+.myStory-text p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+/* the scroll button bellow  */
+.mystory-scroll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+.mystory-scroll p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.mystory-scroll img {
+  width: 2.2rem;
+}
+
+.myStory-wrapper > * {
+  flex-basis: 100%;
+}
+/* ----------------------------------whowe section--------------------------- */
+.whowe {
+  max-width: 100%;
+  background-color: #f1f0ed;
+}
+
+.whowe-row {
+  max-width: 130rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.whowe-col-text {
+  align-self: center;
+}
+
+.whowe-col-text p {
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+.whowe-col {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+.whowe-col img {
+  width: 100%;
+}
+
+.whowe-title {
+  font-size: 6.4rem;
+  margin-bottom: 2rem;
+  color: #e3b26e;
+}
+.title-span {
+  color: #414d58;
+}
+/* ------------------------------Inspired Page--------------------------------------------- */
+.inspired-container {
+  background: #e9e4de;
+}
+.inspired-section {
+  background: #e9e4de;
+  padding: 6rem 5rem 5rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+}
+.inspired {
+  display: flex;
+  align-items: flex-end;
+  padding: 6rem 6rem 6rem 3rem;
+  z-index: 10;
+}
+.inspired-col:not(.last) {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+}
+.inspired-section .inspire-img {
+  width: 90%;
+  align-self: flex-end;
+  z-index: 10;
+}
+.first::before,
+.first::after {
+  content: "";
+  display: block;
+  /* border-radius: 50%; */
+  position: absolute;
+  top: 67%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+
+.first::before {
+  width: 82%;
+  padding-bottom: 35%;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.inspired-title {
+  font-size: 8.2rem;
+  font-weight: 400;
+  color: #e5bf80;
+  margin-bottom: 3rem;
+}
+
+.be-black {
+  color: #111;
+}
+
+.inspired-disc {
+  font-size: 2rem;
+}
+.inspired-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.4rem;
+}
+
+.icons-col img {
+  width: 4rem;
+}
+.icons-col p {
+  padding: 1.2rem 0;
+}
+
+.icons-col a {
+  padding: 0.6rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #e3b26e;
+  border: 2px solid #00000045;
+  margin-bottom: 2rem;
+}
+
+.empower-section {
+  background-color: #f3f2f0;
+}
+
+.empower {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.empower-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.empower-text h1 {
+  font-size: 8.2rem;
+  font-weight: 400;
+  color: #e5bf80;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.empower-para {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  display: flex;
+  text-align: center;
+  letter-spacing: -0.03rem;
+  max-width: 46.6rem;
+  margin: 0 auto;
+  color: #414141;
+}
+.empower-card {
+  max-width: 100%;
+  padding: 2rem;
+}
+.card-continer {
+  max-width: 60%;
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 24px;
+}
+.card-small {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+  max-width: 100%;
+  /* height: 98px; */
+  background-color: #fff;
+  border-radius: 24px;
+}
+
+.card-small img {
+  height: 100%;
+  background-position: center;
+  object-fit: cover;
+}
+.card img {
+  width: 100% !important;
+  background-position: center;
+  object-fit: cover;
+}
+
+.upper-text {
+  max-width: 60%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  text-align: start;
+}
+.upper-text h3 {
+  text-align: start;
+  font-size: 2.25rem;
+}
+.upper-text p {
+  text-align: start;
+  font-size: 1.8rem;
+}
+.container-text h4 {
+  color: #e3b26e;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  margin-bottom: 0.625rem;
+  margin-top: 0.8rem;
+}
+.empower-img {
+  /* visibility: hidden; */
+  width: 100%;
+  height: auto;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 0.2rem 1.6rem;
+}
+
+.container-text {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2/ -1;
+  text-align: start;
+  align-items: flex-start;
+  justify-content: center;
+  padding-inline: 1.4rem;
+  max-width: 100%;
+}
+.container-text p {
+  font-size: 1.8rem;
+}
+.container-text h4 {
+  font-size: 2rem;
+}
+
+button {
+  padding: 0.5rem;
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.27);
+  border-radius: 100px;
+  margin-top: 1rem;
+}
+button a {
+  text-decoration: none;
+  color: #e3b26e;
+}
+
+/* -----------------------------------------news letter ----------------------- */
+.topnav-news {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+.sub-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.5rem;
+}
+.sub-middle {
+  display: flex;
+  justify-content: end;
+  border-radius: 14px;
+  width: 60%;
+}
+#search {
+  border: none;
+  padding: 0.7rem;
+  /* background-color: rgb(126, 125, 125); */
+  background: #eff0f2;
+  width: 90%;
+  border-radius: 14px 0px 0px 14px;
+}
+.subscribe-btn {
+  background-color: #e3b26e;
+  color: white;
+  border: none;
+  border-radius: 0px 14px 14px 0px;
+  margin-top: 0px;
+}
+.subscribe-btn a {
+  color: white;
+}
+.sign-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .sub-wrapper {
+    display: flex;
+    justify-content: row;
+  }
+}
+/* -------------------------------------footer------------------------------------- */
+
+footer {
+  width: 100%;
+  background-color: #caba9b;
+}
+
+.row-footer {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.row-footer p {
+  color: white;
+  margin: 5px 0;
+  font-size: 2rem;
+}
+
+.bold {
+  color: #414d58;
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+.no-bold p a {
+  text-decoration: none;
+  color: white;
+}
+.bold-white p a {
+  color: white;
+}
+
+.support-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  line-height: 2.4rem;
+}
+.col-footer-middle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.support-btn {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.support-btn a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 5px;
+  line-height: 1.5rem;
+  color: #414d58;
+}
+.col-footer-last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-social {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.col-footer-last p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  line-height: 1.2vw;
+  font-size: 1.4rem;
+}
+.title-social-last {
+  color: #414d58;
+  font-size: 1.4rem;
+}
+.bold {
+  font-size: 2rem;
+}
+.no-bold p a {
+  font-size: 1.6rem;
+}
+.bold-white p a {
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.social-icons a {
+  margin: 0 5px;
+}
+@media (max-width: 900px) {
+  .row-footer {
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .col-footer-last {
+    border-top: 1px solid rgb(121, 118, 118);
+    width: 80%;
+    margin-top: 10px;
+  }
+  .col-footer-middle {
+    border-top: 1px solid rgb(121, 118, 118);
+    width: 80%;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sponsorship.css" />
+    <link rel="stylesheet" href="./sub-queries.css" />
+    <title>ECM</title>
+  </head>
+  <body>
+    <!-- ------------------------------the Navbar section-------------------------- -->
+
+    <div class="topnav" id="myTopnav">
+      <img src="./Images/LOGO.svg" alt="" />
+
+      <div class="navbar-wrapper">
+        <div class="nav-container">
+          <a href="../index.html">My story</a>
+          <a href="../index.html">Who we are</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <p class="drop-title">Be inspired</p>
+              <img src="./Images/Vector-nav.svg" alt="" />
+            </button>
+            <div class="dropdown-content">
+              <a href="../videos-navigations/videos.html">Watch Our Videos</a>
+              <a href="../videos-navigations/podcast.html"
+                >Listen to our podcast</a
+              >
+              <a href="../videos-navigations/article.html">Read Our article</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <p class="drop-title">Empower Others</p>
+              <img src="./Images/Vector-nav.svg" alt="" />
+            </button>
+            <div class="dropdown-content">
+              <a href="./community.html">Supporting our Community</a>
+              <a href="./sponsorship.html">Collaboration and Sponsorship</a>
+              <a href="./empower.html">Become a Volunteer</a>
+            </div>
+          </div>
+          <a href="../contact.html">Contact</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+            >&#9776;</a
+          >
+        </div>
+      </div>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </div>
+
+    <section>
+      <div class="volunteer">
+        <div class="sub-header">
+          <nav class="content-navigator">
+            <a href="./empower.html" class="empty-btn">Become a volunteer </a>
+            <a href="./sponsorship.html" class="active-btn">
+              Collaborations or sponsor
+            </a>
+            <a href="./community.html" class="empty-btn"
+              >Support our community
+            </a>
+          </nav>
+          <h1 class="title-main">Collaboratate or sponsor</h1>
+          <p class="small-title">ECMCommunity</p>
+          <div class="container-form">
+            <p class="form-title">How you can volunteer</p>
+            <p class="form-disc">
+              A good community is not only made by a group of people but few
+              individuals who decides to come together for a common good makes a
+              good community. Join us and be part of the ECM community and
+              contribute in helping people transform their lives and discover
+              their real power
+            </p>
+            <div class="contacts-form">
+              <form action="" class="form">
+                <input type="text" placeholder="Full name " />
+                <input type="email" placeholder="Full name " />
+                <input type="text" placeholder="Email Address" />
+                <input type="text" placeholder="Cellphone Number" />
+                <textarea name="comment" form="usrform">Message</textarea>
+              </form>
+              <a href="#" class="btn-send">Send</a>
+            </div>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="volunteer-card">
+          <div class="volunteer-card-img"></div>
+          <div class="card-text">
+            <h1 class="card-title">Get inspired</h1>
+            <p class="card-sub">Checkout our Inspiation videos</p>
+            <p class="card-disc">
+              Often, it is the stories of others which inspires and empowers us
+              to discover our truest selves. Watch our latest content and see
+              how our guest share about their most intimate and life changing
+              experiences
+            </p>
+            <a href="#" class="btn-card">Take me there</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="topnav-news">
+      <div class="sub-wrapper">
+        <label class="sign-title" for="search">Sign up to our newsletter</label>
+        <div class="sub-middle">
+          <input
+            type="text"
+            id="search"
+            placeholder="Enter your email address"
+          />
+          <button class="subscribe-btn">
+            <a class="subscribe-link" href="#">Subscribe</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!---------------------------------- footer section---------------------------- -->
+    <footer class="footer">
+      <div class="row-footer">
+        <div class="col-footer">
+          <h4 class="bold">Be inspired</h4>
+          <div class="bold-white">
+            <p><a href="#">Watch Our Videos</a></p>
+            <p><a href="#">Listen to our podcast</a></p>
+            <p><a href="#">Read our articles</a></p>
+          </div>
+          <h4 class="bold">MY STORY</h4>
+          <div class="no-bold">
+            <p><a href="#">Who we are</a></p>
+            <p><a href="#">Contact Us</a></p>
+          </div>
+        </div>
+        <div class="col-footer-middle">
+          <h4 class="support-title">Support Our Community</h4>
+          <div class="support-btn">
+            <a href="#">Volunteer</a>
+            <a href="#">Collaborate</a>
+            <a href="#">Donate</a>
+          </div>
+          <img src="./Images/LOGO.svg" alt="" />
+        </div>
+        <div class="col-footer-last">
+          <h4 class="title-social">LET’S CONNECT</h4>
+          <p>everyconversationmatters.ecm@gmail.com</p>
+          <p>123456789</p>
+          <h4 class="title-social-last">Reach us on our social platforms</h4>
+          <div class="social-icons">
+            <a href="#"><img src="./Images/instagram-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/twitter-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/facebook-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/yootube-ico.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="./sponsorship.js"></script>
+  </body>
+</html>

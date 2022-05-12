@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./videos.css" />
+    <title>ECM-Videos</title>
+  </head>
+  <body>
+    <!-- ------------------------------the Navbar section-------------------------- -->
+    <div class="topnav" id="myTopnav">
+      <img src="./Images/LOGO.svg" alt="" />
+
+      <div class="navbar-wrapper">
+        <div class="nav-container">
+          <a href="../index.html">My story</a>
+          <a href="../index.html">Who we are</a>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <p class="drop-title">Be inspired</p>
+              <img src="./Images/Vector-nav.svg" alt="" />
+            </button>
+            <div class="dropdown-content">
+              <a href="./videos.html">Watch Our Videos</a>
+              <a href="./podcast.html">Listen to our podcast</a>
+              <a href="./article.html">Read Our article</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">
+              <p class="drop-title">Empower Others</p>
+              <img src="./Images/Vector-nav.svg" alt="" />
+            </button>
+            <div class="dropdown-content">
+              <a href="../sub-navigations/community.html"
+                >Supporting our Community</a
+              >
+              <a href="../sub-navigations/sponsorship.html"
+                >Collaboration and Sponsorship</a
+              >
+              <a href="../sub-navigations/empower.html">Become a Volunteer</a>
+            </div>
+          </div>
+          <a href="../contact.html">Contact</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+            >&#9776;</a
+          >
+        </div>
+      </div>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </div>
+    <div class="sub-header">
+      <nav class="content-navigator">
+        <a href="./videos.html" class="active-btn">Watch our latest content </a>
+        <a href="./podcast.html" class="empty-btn">
+          Listen to our latest content
+        </a>
+        <a href="./article.html" class="empty-btn">Read our latest articles </a>
+      </nav>
+      <h3 class="heading-title">Our Videos</h3>
+    </div>
+
+    <div class="container">
+      <div class="main-video">
+        <div class="video">
+          <video src="videos/3.mp4" controls muted autoplay></video>
+          <h3 class="title">01. Video titles goes here</h3>
+        </div>
+      </div>
+
+      <div class="video-list">
+        <div class="vid active">
+          <video src="videos/4.mp4" controls></video>
+          <h3 class="title">02. Video titles goes here</h3>
+        </div>
+
+        <div class="vid">
+          <video src="videos/6.mp4" controls></video>
+          <h3 class="title">03. Video titles goes here</h3>
+        </div>
+
+        <div class="vid">
+          <video src="videos/3.mp4" controls></video>
+          <h3 class="title">04. Video titles goes here</h3>
+        </div>
+
+        <div class="vid">
+          <video src="videos/3.mp4" controls></video>
+          <h3 class="title">05. Video titles goes here</h3>
+        </div>
+
+        <div class="vid">
+          <video src="videos/3.mp4" controls></video>
+          <h3 class="title">06. Video titles goes here</h3>
+        </div>
+      </div>
+      <!--End video list-->
+    </div>
+    <!--End container-->
+
+    <!-- news letter section -->
+    <div class="topnav-news">
+      <div class="sub-wrapper">
+        <label class="sign-title" for="search">Sign up to our newsletter</label>
+        <div class="sub-middle">
+          <input
+            type="text"
+            id="search"
+            placeholder="Enter your email address"
+          />
+          <button class="subscribe-btn">
+            <a class="subscribe-link" href="#">Subscribe</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!---------------------------------- footer section---------------------------- -->
+    <footer class="footer">
+      <div class="row-footer">
+        <div class="col-footer">
+          <h4 class="bold">Be inspired</h4>
+          <div class="bold-white">
+            <p><a href="#">Watch Our Videos</a></p>
+            <p><a href="#">Listen to our podcast</a></p>
+            <p><a href="#">Read our articles</a></p>
+          </div>
+          <h4 class="bold">MY STORY</h4>
+          <div class="no-bold">
+            <p><a href="#">Who we are</a></p>
+            <p><a href="#">Contact Us</a></p>
+          </div>
+        </div>
+        <div class="col-footer-middle">
+          <h4 class="support-title">Support Our Community</h4>
+          <div class="support-btn">
+            <a href="#">Volunteer</a>
+            <a href="#">Collaborate</a>
+            <a href="#">Donate</a>
+          </div>
+          <img src="./Images/LOGO.svg" alt="" />
+        </div>
+        <div class="col-footer-last">
+          <h4 class="title-social">LET’S CONNECT</h4>
+          <p>everyconversationmatters.ecm@gmail.com</p>
+          <p>123456789</p>
+          <h4 class="title-social-last">Reach us on our social platforms</h4>
+          <div class="social-icons">
+            <a href="#"><img src="./Images/instagram-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/twitter-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/facebook-ico.svg" alt="" /></a>
+            <a href="#"><img src="./Images/yootube-ico.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let listVideo = document.querySelectorAll(".video-list .vid");
+      let mainVideo = document.querySelector(".main-video video");
+      let title = document.querySelector(".main-video .title");
+
+      listVideo.forEach((video) => {
+        video.onclick = () => {
+          listVideo.forEach((vid) => vid.classList.remove("active"));
+          video.classList.add("active");
+          if (video.classList.contains("active")) {
+            let src = video.children[0].getAttribute("src");
+            mainVideo.src = src;
+            let text = video.children[1].innerHTML;
+            title.innerHTML = text;
+          }
+        };
+      });
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./index.js"></script>
+    <script src="./videos.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+/* =========================================sponsorship========================================================== */
+
+/* ==================media queries=========== */
+
+@media (max-width: 750px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 44%;
+  }
+
+  .content-navigator {
+    padding: 0px;
+  }
+  .content-navigator .active-btn {
+    font-size: 1.4rem;
+  }
+
+  .content-navigator .empty-btn {
+    font-size: 1.2rem;
+  }
+
+  .volunteer-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr;
+    border-radius: 24px 44px 0px 0px;
+    margin-top: 10rem;
+  }
+
+  .volunteer-img {
+    border-radius: 24px 44px 0px 0px;
+  }
+
+  .volunteer-card-img {
+    border-radius: 24px 44px 0px 0px;
+  }
+
+  .small-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr;
+  }
+  .small-card {
+    margin-inline: auto;
+    width: 80%;
+  }
+
+  .info-container p {
+    width: 80%;
+    margin-inline: auto;
+    font-size: 1.6rem;
+  }
+
+  .info-title {
+    margin-left: 45px;
+  }
+
+  .horizontal-card {
+    margin-block: 5rem;
+  }
+
+  section {
+    background: #e5e5e5;
+    padding-block: 6rem;
+  }
+}
+
+@media (max-width: 50em) {
+  .btn-mobile-nav {
+    display: block;
+    z-index: 5;
+  }
+  .navbar-wrapper {
+    background: #414d58;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .dropdown-content {
+    background-color: #414d58;
+  }
+  .nav-open .navbar-wrapper {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0%);
+    z-index: 5;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+  .nav-container {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 5;
+  }
+
+  .topnav img {
+    z-index: 8;
+  }
+}
+
+/* ================mobile view================== */
+
+@media (max-width: 28em) {
+  section {
+    padding-inline: 1rem;
+  }
+
+  .community {
+    padding: 1rem;
+  }
+
+  .sub-wrapper {
+    width: 90%;
+  }
+
+  .sign-title {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,482 @@
+/* main colors */
+:root {
+  --main-Background: #e9e4de;
+  --text-Color: #414d58;
+  --button-Color: #e5bf80;
+  --footer-color: #caba9b;
+  --navigation-color: #e3b26e;
+  --white-color: #fafafa;
+}
+/* -----------defaults design------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  color: #333;
+}
+
+html {
+  font-size: 56.25%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*------------------- the navbar section------------- */
+.topnav {
+  width: 100%;
+  background-color: #414d58;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+  position: fixed;
+  z-index: 99;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  border: none;
+}
+
+.navbar-wrapper {
+  padding: 1rem;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.drop-title {
+  margin: 0;
+  font-size: 1.8rem;
+}
+.dropbtn {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  align-items: center;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 1.4rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 16rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  background: rgba(48, 57, 74, 0.8);
+  border-radius: 0px 0px 24px 24px;
+}
+
+.dropbtn img {
+  width: 1rem;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 1.2rem 1.6rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(255, 255, 255);
+  color: #e5bf80;
+  border-radius: 14px;
+}
+
+/* Add black background to dropdown links on hover */
+.dropdown-content a:hover {
+  /* background-color: #ddd; */
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* my navbar responsive */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: rgb(238, 231, 231);
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+@media (max-width: 70em) {
+  .btn-mobile-nav {
+    display: block;
+    z-index: 5;
+  }
+  .navbar-wrapper {
+    background: #414d58;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .dropdown-content {
+    background-color: #414d58;
+  }
+  .nav-open .navbar-wrapper {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0%);
+    z-index: 5;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+  .nav-container {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 5;
+  }
+
+  .topnav img {
+    z-index: 8;
+  }
+}
+
+/* -------------------------the contact section----------- */
+.contact {
+  background-color: var(--white-color);
+  width: 100%;
+}
+.contact-wrapper {
+  max-width: 110rem;
+  padding: 4.6rem;
+  margin: 0 auto;
+  background-color: var(--white-color);
+}
+
+.center-titles {
+  width: 100%;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #e3b26e;
+}
+
+.let-connect {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-style: bold;
+}
+
+.let-connect-disc {
+  font-size: 1.8rem;
+}
+
+.center-contacts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2.3rem;
+  gap: 4.6rem;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.contacts-form input {
+  border: none;
+  border-bottom: 1px solid #222;
+  padding: 0.8rem;
+  background-color: var(--white-color);
+}
+
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  padding: 1rem;
+  max-width: 100%;
+  min-height: 10rem;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #555;
+  /* box-shadow: 1px 1px 1px #999; */
+  border: none;
+  border-bottom: 2px solid rgb(78, 78, 78);
+  background-color: var(--white-color);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.connect-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.connect-disc {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.email-container {
+  min-height: 9rem;
+  border: 2px solid #555;
+  padding: 3rem;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.email-news {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(78, 78, 78);
+  background-color: var(--white-color);
+}
+
+.btn-send:link,
+.btn-send:visited {
+  color: white;
+  background-color: #e5bf80;
+  padding: 0.35rem 1.2rem;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  text-decoration: none;
+  align-self: flex-end;
+  margin-top: 1.2rem;
+}
+/* ========= */
+/* --------------newss--------------------- */
+.topnav-news {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+.sub-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.5rem;
+}
+.sub-middle {
+  display: flex;
+  justify-content: end;
+  border-radius: 14px;
+  width: 60%;
+}
+#search {
+  border: none;
+  padding: 0.7rem;
+  /* background-color: rgb(126, 125, 125); */
+  background: #eff0f2;
+  width: 90%;
+  border-radius: 14px 0px 0px 14px;
+}
+.subscribe-btn {
+  background-color: #e3b26e;
+  color: white;
+  border: none;
+  border-radius: 0px 14px 14px 0px;
+}
+.subscribe-btn a {
+  color: white;
+}
+.sign-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+@media (max-width: 900px) {
+  .sub-wrapper {
+    display: flex;
+    justify-content: row;
+  }
+}
+/* footer styles */
+footer {
+  width: 100%;
+  background-color: #caba9b;
+}
+
+.row-footer {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.row-footer p {
+  color: white;
+  margin: 5px 0;
+  font-size: 2rem;
+}
+
+.bold {
+  color: #414d58;
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+.no-bold p a {
+  text-decoration: none;
+  color: white;
+}
+.bold-white p a {
+  color: white;
+  text-decoration: none;
+}
+
+.support-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: white;
+  line-height: 2.4rem;
+}
+.col-footer-middle {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.support-btn {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.support-btn a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 5px;
+  line-height: 1.5rem;
+  color: #414d58;
+}
+.col-footer-last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-social {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.col-footer-last p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  line-height: 1.2vw;
+  font-size: 1.4rem;
+}
+.title-social-last {
+  color: #414d58;
+  font-size: 1.4rem;
+}
+.bold {
+  font-size: 2rem;
+}
+.no-bold p a {
+  font-size: 1.6rem;
+}
+.bold-white p a {
+  font-size: 1.6rem;
+}
+
+.social-icons a {
+  margin: 0 5px;
+}
+@media (max-width: 900px) {
+  .row-footer {
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .col-footer-last {
+    border-top: 1px solid rgb(121, 118, 118);
+    width: 80%;
+    margin-top: 10px;
+  }
+  .col-footer-middle {
+    border-top: 1px solid rgb(121, 118, 118);
+    width: 80%;
+    margin-top: 10px;
+  }
+}
